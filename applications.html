@@ -44,6 +44,48 @@
     <div id="lowerContainer" class="row">
       <div id="content" class="large-12 columns">
           <!-- @@BITNAMI_MODULE_PLACEHOLDER@@ -->
+        <div class="form-container" style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 20px;">
+    <h3 style="color: #333; margin-bottom: 20px;">Registrar Veículo para Travessia</h3>
+    <hr>
+    <form action="api/veiculos.php" method="POST">
+        <div class="row">
+            <div class="large-6 columns">
+                <label>Placa do Veículo:</label>
+                <input type="text" name="placa" placeholder="ABC1D23" required style="width: 100%;">
+            </div>
+            <div class="large-6 columns">
+                <label>Tipo de Veículo:</label>
+                <select name="tipo" style="width: 100%;">
+                    <option value="Carro de Passeio">Carro de Passeio - R$ 15,00</option>
+                    <option value="Caminhonete">Caminhonete - R$ 20,00</option>
+                    <option value="Caminhão Médio">Caminhão Médio - R$ 60,00</option>
+                    <option value="Caminhão Grande">Caminhão Grande - R$ 80,00</option>
+                </select>
+            </div>
+        </div>
+
+        <label>Nome do Proprietário:</label>
+        <input type="text" name="proprietario" placeholder="Nome Completo" required style="width: 100%;">
+
+        <div class="row">
+            <div class="large-6 columns">
+                <label>CPF/CNPJ:</label>
+                <input type="text" name="cpf_cnpj" placeholder="000.000.000-00" required style="width: 100%;">
+            </div>
+            <div class="large-6 columns">
+                <label>Telefone:</label>
+                <input type="text" name="telefone" placeholder="(00) 00000-0000" required style="width: 100%;">
+            </div>
+        </div>
+
+        <label>Email (Opcional):</label>
+        <input type="email" name="email" placeholder="seuemail@exemplo.com" style="width: 100%; margin-bottom: 20px;">
+
+        <button type="submit" style="background: #28a745; color: white; border: none; padding: 15px 25px; cursor: pointer; border-radius: 4px; width: 100%; font-weight: bold; font-size: 16px;">
+            Confirmar Registro de Veículo
+        </button>
+    </form>
+</div>
       </div>
     </div>
   </div>
